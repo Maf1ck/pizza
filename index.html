@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка пиццы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Ma-ma-mia-italiano</h1>
+        <ul class="header">
+            <li><a href="#">Головна</a></li>
+            <li><a href="#">Меню</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+</header>
+<main>
+    <section class="menu">
+        <h2 id="h2">Меню</h2>
+            <li>
+                <img src="images/margarita.jpeg" alt="Маргарита">
+                <h3>Маргарита</h3>
+                <p>Якась там піца</p>
+                <span class="price">200 грн</span>
+                <button class="add">Додати до кошика</button>
+            </li>
+            <li>
+                <img src="images/peperoni.jpeg" alt="Пепероні">
+                <h3>Пепероні</h3>
+                <p>якась там начинка</p>
+                <span class="price">250 грн</span>
+                <button class="add">Додати до кошика</button>
+            </li>
+            <li>
+                <img src="images/sur.jpeg" alt="Четыре сыра">
+                <h3>Чотири сира</h3>
+                <p>шось там якісь сири</p>
+                <span class="price">300 грн</span>
+                <button class="add">Додати до кошика</button>
+            </li>
+        </ul>
+    </section>
+</main>
+<footer>
+    &copy; 2024 Доставка пиццы
+</footer>
+</body>
+</html>
+<script>
+    const addT = document.querySelectorAll(".add");
+
+    addT.forEach((button) => {
+        button.addEventListener("click", () => {
+            const name = button.dataset.name;
+            const price = button.dataset.price;
+
+            console.log(${name} ${price});
+        });
+    });
+</script>
